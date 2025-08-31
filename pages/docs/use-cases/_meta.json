@@ -1,4 +1,5 @@
 {
-  "chatbot": "chatbot",
-  "semantic-search": "Semantic Search"
+  "chatbot": "Chatbot",
+  "semantic-search": "Semantic Search",
+  "agentic-rag-api": "Agentic RAG API"
 }

@@ -1,0 +1,121 @@
+# RAG Knowledge Chatbot Kit
+
+Turn your unstructured content into a **chat-based knowledge base in minutes.**  
+Deploy an AI chatbot that retrieves answers with citations from your company data (Drive, SharePoint, Sheets, S3, Postgres, web via FireCrawl).  
+
+This kit helps teams move from **static documents** to an **interactive assistant** that can onboard employees, deflect customer queries, and unlock knowledge trapped in silos.  
+It’s a demo-ready “product clone” you can extend, brand, and ship.
+
+---
+
+## Links
+- [Try the Chatbot Template (Preview)](REPLACE_WITH_PREVIEW_LINK)  
+- [Project showcase (Studio)](REPLACE_WITH_STUDIO_PROJECT_LINK)  
+- [Live demo](REPLACE_WITH_DEMO_LINK)  
+
+---
+
+## What this kit delivers
+
+- **Instant knowledge Q&A** – Search and ask questions directly in natural language.  
+- **Enterprise-ready chatbot** – Accurate, cited answers from multiple knowledge sources.  
+- **Cloneable product** – Out-of-the-box deployment as support bot, HR helpdesk, or knowledge companion.  
+- **High-value outcomes** – Reduce ticket load, speed up onboarding, increase knowledge transparency.  
+- **Future-ready** – Extendable with reasoning agents, multi-turn memory, or integrations.  
+
+---
+
+## How it works
+
+1. **Ingest & index** – Connect any content source. Lamatic scrapes, chunks, and embeds docs with metadata.  
+2. **Retrieve & ground** – On each query, the retriever fetches the most relevant chunks (k-NN / hybrid).  
+3. **Answer & reason** – The assistant generates a grounded, cited response. Optional agentic tools handle multi-step queries.  
+4. **Keep fresh** – FireCrawl ensures web + connected docs are re-synced on schedule, so answers never go stale.  
+
+---
+
+## Vertical use cases
+
+- **Customer Support**  
+  Deploy on your support site to answer FAQs, refund policies, and troubleshooting queries — reducing human workload while maintaining trust with cited sources.  
+
+- **HR & Employee Helpdesk**  
+  Employees can self-serve benefits, compliance, and IT questions, cutting down on repetitive HR ops tasks.  
+
+- **Engineering Assistant**  
+  Developers can ask, *“How do I set up the new service?”* and the bot pulls from onboarding guides, RFCs, or runbooks.  
+
+- **Sales Enablement**  
+  Keep sales teams sharp by answering questions about competitor features, pricing tiers, or product specs instantly.  
+
+---
+
+## Customization paths
+
+- **Data sources** – Add/remove connectors (Drive, DBs, S3, FireCrawl for web).  
+- **Branding** – White-label the web widget or deploy inside Slack/Teams.  
+- **Monetization** – Use as a customer-facing premium bot, or offer it as a SaaS add-on.  
+- **Adaptation** – Extend with APIs, structured reasoning flows, or domain-specific prompt libraries.  
+
+> Each subpage (like this one) can be cloned, branded, and pitched as a **vertical kit** — support bot, HR bot, engineering assistant, or sales enablement bot.
+
+---
+
+## Configuration best practices
+
+- **Chunking** – 700–1,000 tokens with 10–15% overlap for balance between recall and cost.  
+- **Retriever** – Default k=6–8; enable re-ranker for longer responses.  
+- **Context window** – Cap at model-safe token limit; include citations + compact metadata.  
+- **Observability** – Capture query traces, source hits, and user feedback (👍/👎).  
+- **Safety** – Enable filters for PII redaction, compliance, or internal blocklists.  
+
+---
+
+## Success metrics
+
+- **Answered-with-citation rate** (target ≥ 90%) – Trust indicator.  
+- **Helpful ratio (👍)** – Measures user satisfaction.  
+- **Deflection rate** – % of queries resolved without escalation.  
+- **Coverage** – % of docs indexed and retrievable.  
+- **Latency** – First response time (p50/p95).  
+
+> By tracking these KPIs, teams can prove value early and justify expansion.
+
+---
+
+## Security & governance
+
+- **Row-level security** – Results filtered by workspace/space ACLs.  
+- **Audit logs** – Every query, tool call, and citation is logged for compliance.  
+- **Data residency** – Configurable per workspace.  
+- **Retention controls** – Choose how long interactions are stored.  
+
+---
+
+## FAQs
+
+**Can it handle private sites?**  
+Yes—via authenticated connectors or FireCrawl with auth headers/cookies.  
+
+**Can we scope results by team?**  
+Yes—retrieval respects ACLs, ensuring users only see what they’re allowed to.  
+
+**How much data can it handle?**  
+Millions of chunks; sharded per workspace for performance.  
+
+**Can we embed in apps?**  
+Yes—via web widget, Slack/Teams app, or Chat API.  
+
+**Does it support multiple languages?**  
+Yes—retrieval and generation are multilingual.  
+
+---
+
+## Next steps
+
+1. [Open in Studio](REPLACE_WITH_STUDIO_PROJECT_LINK) and try the template.  
+2. Deploy to **Slack, Teams, or your website**.  
+3. Track the metrics above to prove ROI.  
+4. Clone and adapt this kit into vertical products (Support, HR, Engineering, Sales).  
+
+**This Chatbot Kit is the foundation for building verticalized “app-in-a-box” products — fast, demo-ready, and customizable.**

@@ -1,0 +1,69 @@
+# Semantic Search (Agent Kit)
+
+Enable **natural-language search** across your company’s content — Drive, SharePoint, S3, OneDrive, Google Sheets, and web (via FireCrawl).  
+Users ask in plain English, and results come back as **relevant snippets with citations**.
+
+---
+
+## Links
+- [Try the Semantic Search Template (Preview)](REPLACE_WITH_PREVIEW_LINK)
+- [Project showcase (Studio)](REPLACE_WITH_STUDIO_PROJECT_LINK)
+- [Live demo](REPLACE_WITH_DEMO_LINK)
+
+---
+
+## What this kit delivers
+- **Natural language search** across multiple data sources.
+- **Relevant results with citations** so users trust answers.
+- **Facets & filters** powered by metadata (author, type, date).
+- **Enterprise connectors** (Drive, SharePoint, OneDrive, S3, FireCrawl).
+- **Secure by design** — respects ACLs; supports audit logs & PII redaction.
+
+---
+
+## How it works
+1. **Ingest & index** – Connect sources, scrape via FireCrawl, chunk + embed with metadata.
+2. **Query & retrieve** – Hybrid semantic + keyword search, tuned for relevance.
+3. **Rank & present** – Optional re-ranker improves results; snippets + citations are shown.
+4. **Stay fresh** – Scheduled syncs + hooks keep results up-to-date.
+
+---
+
+## Vertical use cases
+- **Support portal search** – customers find answers instantly.
+- **Internal knowledge hub** – HR, IT, and Legal in one unified search.
+- **Sales enablement** – quick access to decks, briefs, competitor notes.
+- **Developer docs** – APIs, SDKs, runbooks with contextual snippets.
+- **Public site search** – power your website’s docs with intelligent search.
+
+---
+
+## Configuration best practices
+- **Chunk size**: 500–800 tokens; 10–15% overlap.
+- **Retriever**: k=8; hybrid on when metadata is rich.
+- **Freshness**: schedule crawls; trigger re-index on updates.
+- **Metadata**: capture author, updated_at, tags for facets.
+
+---
+
+## Success metrics
+- **Zero-results rate** (should trend down).
+- **Click-through to source**.
+- **Helpful / Not helpful ratio (👍/👎)**.
+- **Latency** (p50, p95).
+- **Coverage** (% of docs indexed).
+
+---
+
+## FAQs
+**Can it handle private sites?** Yes — authenticated connectors supported.  
+**How much can it scale?** Millions of chunks; shard by workspace.  
+**Multilingual?** Yes — retrieval + ranking support multiple languages.  
+**Can we tune ranking?** Yes — boosts, re-rankers, hybrid weights.
+
+---
+
+## Next steps
+- Open in Studio and connect your own sources.
+- Deploy as a widget, Slack/Teams app, or via API.
+- Track metrics to optimize results.

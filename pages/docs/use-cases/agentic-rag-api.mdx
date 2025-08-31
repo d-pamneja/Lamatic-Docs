@@ -1,0 +1,102 @@
+# Agentic RAG API (Agent Kit)
+
+Enable a **hybrid AI search API** that blends **vectorized internal content** with **agent-driven web search** when needed.  
+Queries come in via API (GraphQL/REST), and the system routes intelligently between **internal RAG retrieval** and **live web fetches**, returning a **structured JSON response with citations**.
+
+This kit is ideal for powering apps, portals, and workflows where you need **fresh, cited answers via API**, not chat UI.
+
+---
+
+## Links
+- [Try the Agentic RAG API Template (Preview)](REPLACE_WITH_PREVIEW_LINK)  
+- [Project showcase (Studio)](REPLACE_WITH_STUDIO_PROJECT_LINK)  
+- [Live demo](REPLACE_WITH_DEMO_LINK)  
+
+---
+
+## What this kit delivers
+- **Hybrid retrieval** – Internal RAG first, auto-escalates to web search if context is missing.  
+- **Structured JSON responses** with answer, citations, passages, and tool runs.  
+- **Citations by default** – every fact is grounded in a source (internal or web).  
+- **Enterprise connectors** – Drive, SharePoint, Sheets, OneDrive, S3, Postgres, FireCrawl (web).  
+- **Agentic routing** – supervisor agent decides when to fetch from web, use tools, or stick to local context.  
+- **Observability** – logs, traces, and per-source metrics.  
+
+---
+
+## How it works
+1. **Ingest & index** – Connect data sources; Lamatic scrapes (FireCrawl for web), chunks, embeds, and indexes content with metadata.  
+2. **Classify query** – A router agent predicts if the answer is in internal data, web, or both.  
+3. **Retrieve & ground** – Semantic + keyword retrieval fetches passages from sources.  
+4. **Escalate to web** (if needed) – Search + crawl summarize new pages; URLs captured as citations.  
+5. **Compose & reason** – Answer drafted from snippets, validated against source coverage.  
+6. **Return schema** – Responses structured like:  
+
+   ```json
+   {
+     "answer": "string",
+     "citations": [{"title": "string", "url": "string", "source": "drive|web|..."}],
+     "passages": [{"text": "string", "sourceId": "string"}],
+     "sources": [{"id": "string", "kind": "drive|s3|web", "meta": {"author": "...", "date": "...}}],
+     "toolRuns": [{"tool": "retriever|serp|crawl", "latencyMs": 0}]
+   }
+
+---
+
+## Vertical use cases
+- **Engineering & IT** – Internal runbooks first, escalate to vendor docs/web if coverage missing.  
+- **Analyst workflows** – Combine company docs + fresh market intel into a cited brief.  
+- **Customer portals** – “Ask Support” via API returns cited answers, embeddable anywhere.  
+
+---
+
+## Customization paths
+- **Tools** – Add/remove web fetch, crawling, code-execution, custom APIs.  
+- **Retrieval** – Tune chunk size, k, hybrid weighting, metadata facets.  
+- **Guardrails** – Require N citations, allowlist domains, redact PII, enforce ACLs.  
+- **Response format** – JSON schemas, custom answer templates, structured reasoning.  
+- **Performance** – caching, memoization, rate limits.  
+
+---
+
+## Configuration best practices
+- Use **hybrid retrieval** (vector + BM25) for balanced recall.  
+- Chunk size ~512–1024 tokens; ~10% overlap.  
+- Allowlist authoritative domains for web search.  
+- Enable ACL passthrough + PII redaction.  
+- Cache results, set TTLs for web fetch freshness.  
+
+---
+
+## Success metrics
+- **Coverage** – % of answers grounded in internal sources.  
+- **Citation accuracy** – answers with ≥2 citations.  
+- **Latency** – P50/P95 end-to-end response time.  
+- **Escalation rate** – % of queries routed to web.  
+- **Freshness** – avg. age of sources used.  
+- **User feedback** – helpful vs. not helpful ratings.  
+
+---
+
+## Security & governance
+- Respects **ACLs** of connected data.  
+- **Audit logs** capture queries, tool calls, and citations.  
+- **PII scrubbing** at ingest and before response.  
+- **Domain allow/deny lists** for web sources.  
+- **Per-app API keys**, signed requests, quotas.  
+
+---
+
+## FAQs
+**Does it work without internet?** Yes—disable web tools for internal-only mode.  
+**How are citations generated?** From retrieved passages (internal) + crawled sources (web).  
+**What if internal + web conflict?** Both answers shown with separate citations.  
+**Can I force specific sources?** Yes—filters or source allowlists.  
+
+---
+
+## Next steps
+- Replace preview/demo links with real Studio projects.  
+- Test in Studio with your own sources.  
+- Deploy API endpoints in your app/portal.  
+- Track success metrics and refine retrieval/web settings.  
